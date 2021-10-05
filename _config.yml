@@ -1,6 +1,6 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name:Keyboard Warrior
+description: Breaking software is just finding unintended features, right?
+meta_description: "Keyboard Warrior, Breaking software is just finding unintended features, right?"
 
 markdown: kramdown
 highlighter: rouge
