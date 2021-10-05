@@ -20,7 +20,7 @@ Bash is an interesting target because it does not stop execution if a command fa
 
 The label of an address created through `getnewaddress` serves as our entrypoint into our dumpwallet file, we can stuff bash commands in this field.
 
-Labels barely do any filtering for useful characters (thanks @tecnovert):
+Labels barely do any filtering for useful characters:
 ```
 "label": "~!@#$%^&*()-_=+[]\\{}|;':\",./<>?",
 ```
