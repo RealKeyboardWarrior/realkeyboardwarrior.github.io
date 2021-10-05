@@ -5,16 +5,14 @@ date:   2013-11-10 10:18:00
 categories: Security
 ---
 
-## Summary
-We can combine the usage of `getnewaddress` and `dumpwallet` to create a reverse shell connection to an attackers machine, essentially elevating our limited access to `bitcoind` to a full complete shell.
+Exposing a the bitcoind rpc has always been a bad idea, but I suppose it doesn't hurt to add another reason to it! We discovered that the usage of bitcoind's `getnewaddress` and `dumpwallet` can be abused to create a reverse shell connection to an attackers machine, essentially elevating our limited access to `bitcoind` to a full complete "SSH" shell. While it's unlikely to find exposed bitcoind servers, this technique can be useful to perform lateral movements within a compromised environment.
 
-### Nearly arbitrary write access through dumpwallet
+## Nearly arbitrary write access through dumpwallet
 We can leverage the `dumpwallet` command to write a file to an absolute path.
 This can be leveraged to write files into sensitive locations such as `~/.bashrc`
-Other locations such as `~/.bash_profile` or `~/.bash-login` are also interesting,
-these have a higher chance of not having a file already but will only trigger when a new ssh login happens.
+Other locations such as `~/.bash_profile` or `~/.bash-login` are also interesting, these have a higher chance of not having a file already but will only trigger when a new ssh login happens.
 
-We can only write non-executable files, but this isn't really a constrained because the interesting locations mentioned above do not require the executable property. The shell will read the contents of the file into a variable and execute it.
+We can only write non-executable files, but this isn't really a constraint because the interesting locations mentioned above do not require the executable property. The shell will read the contents of the file into a variable and execute it.
 
 Bash is an interesting target because it does not stop execution if a command failed. This is instrumental to skip over the "garbage" lines because we don't actually control the format of the file created by `dumpwallet`.
 
