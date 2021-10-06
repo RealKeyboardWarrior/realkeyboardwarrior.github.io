@@ -1,11 +1,21 @@
 ---
 layout: post
-title:  "Pwning Bitcoind RPC To Remote Code Execution"
+title:  "Pwning Bitcoind RPC To RCE"
 date:   2013-11-10 10:18:00
 categories: Security
 ---
 
-Exposing a the bitcoind rpc has always been a bad idea, but I suppose it doesn't hurt to add another reason to it! We discovered that the usage of bitcoind's `getnewaddress` and `dumpwallet` can be abused to create a reverse shell connection to an attackers machine, essentially elevating our limited access to `bitcoind` to a full complete "SSH" shell. While it's unlikely to find exposed bitcoind servers, this technique can be useful to perform lateral movements within a compromised environment.
+Exposing the bitcoind rpc has always been a bad idea, but let's make it worse! We discovered that the usage of bitcoind's `getnewaddress` and `dumpwallet` can be abused to gain remote code execution, essentially elevating our limited access from `bitcoind` to a full complete "SSH" shell allowing us to execute arbitrary commands. 
+
+## Introduction
+This potential security vulnerability has been reported to the bitcoin core team but there does not seem to be enough interest in patching this, so the least I can do is atleast raise the awareness that the bitcoind rpc exposes dangerous functions.
+
+The impact is severely limited because:
+* attackers require authenticated access to `bitcoind´
+* `bitcoind` only binds to localhost by default
+* triggering code execution is not straightforward
+
+This technique can mainly be used to perform lateral movements within an already compromised environment.
 
 ## Nearly arbitrary write access through dumpwallet
 We can leverage the `dumpwallet` command to write a file to an absolute path.
