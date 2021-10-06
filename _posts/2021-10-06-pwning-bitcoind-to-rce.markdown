@@ -122,3 +122,5 @@ dumpwallet /home/user/.bashrc
 
 ### Now we wait
 A trap has been laid out, we now only require a bash shell to be spawned on the server which loads our malicious `.bashrc` which in turn trigger our malicious payload.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Pwning Bitcoind RPC To RCE<br>https:/RealKeyboardWarrior.github.io/security/2021/10/06/pwning-bitcoind-to-rce.html</p>&mdash; KeyboardWarrior (@Keyb0ardWarr10r) <a href="https://twitter.com/Keyb0ardWarr10r/status/1445546006284685317?ref_src=twsrc%5Etfw">October 6, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
