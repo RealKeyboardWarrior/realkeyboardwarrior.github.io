@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pwning Bitcoind RPC To RCE"
-date:   2013-11-10 10:18:00
+date:  2021-10-06 10:18:00
 categories: Security
 ---
 
@@ -11,7 +11,7 @@ Exposing the bitcoind rpc has always been a bad idea, but let's make it worse! W
 This potential security vulnerability has been reported to the Bitcoin Core security team but there is insufficient interest in patching this, but the least we should do is raise some awareness that the bitcoind rpc exposes dangerous functions.
 
 The impact is severely limited because:
-* attackers require authenticated access to `bitcoind´
+* attackers require authenticated access to `bitcoind`
 * `bitcoind` only binds to localhost by default
 * triggering code execution is not straightforward
 
