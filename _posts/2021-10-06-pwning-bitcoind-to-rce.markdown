@@ -8,7 +8,7 @@ categories: Security
 Exposing the bitcoind rpc has always been a bad idea, but let's make it worse! We discovered that the usage of bitcoind's `getnewaddress` and `dumpwallet` can be abused to gain remote code execution, essentially elevating our limited access from `bitcoind` to a full complete "SSH" shell allowing us to execute arbitrary commands. 
 
 ## Introduction
-This potential security vulnerability has been reported to the bitcoin core team but there does not seem to be enough interest in patching this, so the least I can do is atleast raise the awareness that the bitcoind rpc exposes dangerous functions.
+This potential security vulnerability has been reported to the bitcoin core team but there does not seem to be enough interest in patching this, so the least I can do is raise the awareness that the bitcoind rpc exposes dangerous functions.
 
 The impact is severely limited because:
 * attackers require authenticated access to `bitcoind´
