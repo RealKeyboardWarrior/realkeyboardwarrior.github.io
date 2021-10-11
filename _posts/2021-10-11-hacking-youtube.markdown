@@ -7,7 +7,7 @@ categories: Security
 
 
 
-I accidentally discovered a DoS vulnerability in YouTube during a late night debugging sessions on a MP4 muxer. This is a story how a simple bug in my own code made me rethink the security implications of a video transcoding pipeline.
+I accidentally discovered a DoS vulnerability in YouTube during a late night debugging session on a MP4 muxer. This is a story how a simple bug in my own code made me rethink the security implications of a video transcoding pipeline.
 
 ## Understanding Muxers
 If you don't know what a "muxer" is, that's fine. I didn't have a single clue either, up until I had to actually fix one. 
@@ -44,7 +44,7 @@ One of the bugs in my muxer was that I announced to use a timeScale of '12,000' 
 I was playing with the presentation timestamp values and suddenly produced this video of **4MB yet claimed to have 15 hours of footage**.
 
 
-<video controls>
+<video width="50%" controls>
   <source src="https://realkeyboardwarrior.github.io/assets/images/15hours.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
