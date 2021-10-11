@@ -79,6 +79,8 @@ As a result of this I decided to report it to YouTube as a potential security is
 >Regards,
 >Google Security Bot
 
+To the best of my knowledge, the impact was rather low because their transcoders are setten up in such a way that they will eventually give up on file if it takes too many resources.They didn't disclose what exactly was happening behind the scenes so I can only guess. I believe that it was the service responsible for generating thumbnails that has to decode the file would eventually give up on trying and that caused the video to remain stuck in the "in processing" phase.
+
 ## Bonus: naive duration estimation is a sin
 A MP4 file can lie about the duration in their header and contain a much longer video than it initially claimed. 
 
