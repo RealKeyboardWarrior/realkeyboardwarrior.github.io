@@ -80,7 +80,7 @@ As a result of this I decided to report it to YouTube as a potential security is
 >Google Security Bot
 
 ## Bonus: naive duration estimation is a sin
-An MP4 file can lie about its duration in the header and contain a much longer video than it claimed. 
+A MP4 file can lie about the duration in their header and contain a much longer video than it initially claimed. 
 
 For example, we can have the metadata box claim a duration of 15 minutes but have a video of 24 hours. The transcoding process will typically recalculate the final duration and doesn't rely on the metadata. 
 
