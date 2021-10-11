@@ -54,11 +54,11 @@ Now, what would you do if you come across such a strange file? Well, I uploaded 
 Video is too long.
 
 ## Assessing The Impact
-I decided to do some tests and generated video files and see how they behave throughout the video pipeline. **So I made a three hour video version which was 4MB as well, but after it had been processed by YouTube it had become a monster if 825MB**.
+I decided to do some tests and generated video files and see how they behave throughout the video pipeline. **So I made a three hour video version which was 4MB as well, but after it had been processed by YouTube it had become a monster of 825MB**.
 
-This gave away an clue as to what is happening behind the scenes, YouTube always transcodes videos to a variety of formats (4k, 1080p, 720p, etc..) But in the processes also ensured **Constant Frame Rate (CFR)**, which is a fancy word for saying that every second of video footage contains exactly the same amount of frames. The alternative is **Variable Frame Rate (VFR)** which can help optimize storage for static videos, where changes don't occur often.
+This gave a clue as to what is happening behind the scenes, YouTube always transcodes videos to a variety of formats (4k, 1080p, 720p, etc..) But in the processes also ensured **Constant Frame Rate (CFR)**, which is a fancy word for saying that every second of video footage contains exactly the same amount of frames. The alternative is **Variable Frame Rate (VFR)** which can be interesting if you're optimizing for storage.
 
-Given that the video of 3 hours had been inflated by 20,600% due to this configuration, I had decided to make some examples. One video had the length of 750 days, and by my calculations, it should have resulted in a video file of several terabytes.
+Given that the video of 3 hours had been inflated by 20,600% due to this configuration, I had decided to ramp this up. I had settled on a video that had the length of 750 days, and by my calculations, it should have resulted in a video file of several terabytes.
 
 ## Reporting To YouTube
 As a result of this I decided to report it to YouTube as a potential security issue and not too long after that I received an email:
