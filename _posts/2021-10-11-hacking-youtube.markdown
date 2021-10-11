@@ -7,7 +7,7 @@ categories: Security
 
 
 
-I accidentally discovered a DoS vulnerability in YouTube during a late night debugging session on a MP4 muxer. This is a story how a simple bug in my own code made me rethink the security implications of a video transcoding pipeline.
+I accidentally discovered a potential vulnerability in YouTube during a late night debugging session on a MP4 muxer. This is a story how a simple bug in my own code made me rethink the security implications of a video transcoding pipeline.
 
 ## Understanding Muxers
 If you don't know what a "muxer" is, that's fine. I didn't have a single clue either, up until I had to actually fix one. 
