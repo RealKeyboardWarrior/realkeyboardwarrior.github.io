@@ -44,7 +44,7 @@ One of the bugs in my muxer was that I announced to use a timeScale of '12,000' 
 I was playing with the presentation timestamp values and suddenly produced this video of **4MB yet claimed to have 15 hours of footage**.
 
 
-<video width="50%" controls>
+<video width="100%" controls>
   <source src="https://realkeyboardwarrior.github.io/assets/images/15hours.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
