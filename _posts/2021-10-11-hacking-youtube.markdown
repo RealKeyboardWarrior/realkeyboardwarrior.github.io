@@ -97,6 +97,6 @@ The metatadata is located at:
 
 * The size of a video file is not an proper indicator for how long it is
 * CFR transcoding can lead to DoS issues if you fail to validate the duration properly
-* Validate the duration of a video properly, don't really on the metadata
+* Validate the duration of a video properly, don't rely on the metadata
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Hacking YouTube With MP4 <a href="https://t.co/OWhWw76Nl6">https://t.co/OWhWw76Nl6</a></p>&mdash; KeyboardWarrior (@Keyb0ardWarr10r) <a href="https://twitter.com/Keyb0ardWarr10r/status/1447628638384529410?ref_src=twsrc%5Etfw">October 11, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
